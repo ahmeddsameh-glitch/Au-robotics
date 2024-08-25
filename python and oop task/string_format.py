@@ -12,17 +12,32 @@ def format_string(string, operations):
     string = _reverse(string)
  return string
 def _uppercase(string):
- string=string.upper()
- print(string)
- return string
+ word =''
+ for char in string:
+  if 'a' <= char <= 'z':
+    letter = chr(ord(char) - 32)
+    word += letter
+  else:
+   word += letter
+ print(word)
+ return word
 def _lowercase(string):
- string=string.lower()
- print(string)
- return string
+ word =''
+ for char in string:
+  if 'A' <= char <= 'Z':
+    letter = chr(ord(char) + 32)
+    word += letter
+  else:
+   word += letter
+ print(word)
+ return word
 def _capitalize(string):
- string=string.capitalize()
- print(string)
- return string
+ 
+ firstChar = string[0]
+ if 'a' <= firstChar <= 'z':
+    firstChar = chr(ord(firstChar) - 32)
+ print(firstChar+string[1:])
+ return firstChar + string[1:]
 def _reverse(string):
  string=string[::-1]
  print(string)
